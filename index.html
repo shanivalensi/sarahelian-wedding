@@ -1,698 +1,891 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<meta name="format-detection" content="telephone=no" />
-<title>Sarah & Elian</title>
-<meta name="description" content="Invitation au mariage de Sarah & Elian — 25 août 2026" />
-<meta property="og:title" content="Sarah & Elian" />
-<meta property="og:description" content="Invitation au mariage de Sarah & Elian — 25 août 2026" />
-<meta property="og:type" content="website" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Sarah & Elian</title>
+    <meta
+      name="description"
+      content="Invitation au mariage de Sarah & Elian — 25 août 2026"
+    />
+    <meta property="og:title" content="Sarah & Elian" />
+    <meta
+      property="og:description"
+      content="Invitation au mariage de Sarah & Elian — 25 août 2026"
+    />
+    <meta property="og:type" content="website" />
 
-<style>
-  @font-face {
-    font-family: 'Quicksand';
-    src: url('fonts/Quicksand-VariableFont_wght.ttf');
-    font-weight: 300 700;
-  }
-  @font-face {
-    font-family: 'Carmela';
-    src: url('fonts/Carmela Regular.ttf') format('truetype');
-    font-weight: 400 700;
-  }
-  @font-face {
-    font-family: 'CitadelScript';
-    src: url('fonts/CitadelScriptStd.otf') format('opentype');
-    font-weight: 400;
-  }
+    <style>
+      @font-face {
+        font-family: "Quicksand";
+        src: url("fonts/Quicksand-VariableFont_wght.ttf");
+        font-weight: 300 700;
+      }
+      @font-face {
+        font-family: "Carmela";
+        src: url("fonts/Carmela Regular.ttf") format("truetype");
+        font-weight: 400 700;
+      }
+      @font-face {
+        font-family: "CitadelScript";
+        src: url("fonts/CitadelScriptStd.otf") format("opentype");
+        font-weight: 400;
+      }
 
-  :root {
-    --text: #773500;
-    --btn-bg: #d2c0ab;
-    --max-w: 560px;
-  }
+      :root {
+        --text: #773500;
+        --btn-bg: #d2c0ab;
+        --max-w: 560px;
+      }
 
-  * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
 
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: #e9e1d3;
-    color: var(--text);
-    font-family: 'Quicksand', sans-serif;
-    overflow-x: hidden;
-    -webkit-text-size-adjust: 100%;
-  }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #e9e1d3;
+        color: var(--text);
+        font-family: "Quicksand", sans-serif;
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+      }
 
-  .page {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    position: relative;
-    background: #e9e1d3;
-  }
+      .page {
+        max-width: var(--max-w);
+        margin: 0 auto;
+        position: relative;
+        background: #e9e1d3;
+      }
 
-  img { max-width: 100%; display: block; }
+      img {
+        max-width: 100%;
+        display: block;
+      }
 
-  a { color: inherit; }
+      a {
+        color: inherit;
+      }
 
-  /* ---------- Splash ---------- */
-  #splash {
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    background: #e9e1d3;
-  }
-  .splash-inner {
-    position: relative;
-    width: 100%;
-    max-width: var(--max-w);
-    height: 100%;
-    background-image: url('resources/background/background0.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .splash-besd {
-    position: absolute;
-    top: clamp(12px, 4vw, 22px);
-    right: clamp(12px, 4vw, 22px);
-    font-weight: 700;
-    font-size: clamp(11px, 3vw, 14px);
-  }
-  .envelope-wrap {
-    position: relative;
-    width: 74%;
-    max-width: 380px;
-  }
-  .splash-buttons {
-    position: absolute;
-    left: 6%;
-    right: 6%;
-    bottom: 6%;
-    display: flex;
-    justify-content: center;
-    gap: 3%;
-  }
-  .splash-btn {
-    flex: 0 0 auto;
-    width: clamp(95px, 28vw, 135px);
-    text-align: center;
-    background: var(--btn-bg);
-    color: var(--text);
-    border: none;
-    border-radius: 0;
-    padding: clamp(9px, 2.6vw, 12px) clamp(6px, 2vw, 10px);
-    font-size: clamp(10px, 2.6vw, 12px);
-    font-weight: 700;
-    cursor: pointer;
-    letter-spacing: 0.4px;
-  }
-  .splash-btn.fr-btn {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
-    font-size: clamp(8.5px, 2.3vw, 10.5px);
-    letter-spacing: 0.2px;
-    white-space: nowrap;
-  }
-  .splash-btn.he-btn {
-    font-family: 'Carmela', sans-serif;
-    font-weight: 700;
-    font-size: clamp(11px, 3vw, 14px);
-  }
+      /* ---------- Splash ---------- */
+      #splash {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        background: #e9e1d3;
+      }
+      .splash-inner {
+        position: relative;
+        width: 100%;
+        max-width: var(--max-w);
+        height: 100%;
+        background-image: url("resources/background/background0.png");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .splash-besd {
+        position: absolute;
+        top: clamp(12px, 4vw, 22px);
+        right: clamp(12px, 4vw, 22px);
+        font-weight: 700;
+        font-size: clamp(11px, 3vw, 14px);
+      }
+      .envelope-wrap {
+        position: relative;
+        width: 74%;
+        max-width: 380px;
+      }
+      .splash-buttons {
+        position: absolute;
+        left: 6%;
+        right: 6%;
+        bottom: 6%;
+        display: flex;
+        justify-content: center;
+        gap: 3%;
+      }
+      .splash-btn {
+        flex: 0 0 auto;
+        width: clamp(95px, 28vw, 135px);
+        text-align: center;
+        background: var(--btn-bg);
+        color: var(--text);
+        border: none;
+        border-radius: 0;
+        padding: clamp(9px, 2.6vw, 12px) clamp(6px, 2vw, 10px);
+        font-size: clamp(10px, 2.6vw, 12px);
+        font-weight: 700;
+        cursor: pointer;
+        letter-spacing: 0.4px;
+      }
+      .splash-btn.fr-btn {
+        font-family: "Quicksand", sans-serif;
+        font-weight: 400;
+        font-size: clamp(8.5px, 2.3vw, 10.5px);
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+      }
+      .splash-btn.he-btn {
+        font-family: "Carmela", sans-serif;
+        font-weight: 700;
+        font-size: clamp(11px, 3vw, 14px);
+      }
 
-  /* ---------- Shared section scaffolding ---------- */
-  .lang-block { display: none; }
+      /* ---------- Shared section scaffolding ---------- */
+      .lang-block {
+        display: none;
+      }
 
-  section { position: relative; overflow: hidden; }
+      section {
+        position: relative;
+        overflow: hidden;
+      }
 
-  .bg-layer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: top center;
-    z-index: 0;
-  }
+      .bg-layer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        z-index: 0;
+      }
 
-  .overlay { position: relative; z-index: 1; }
+      .overlay {
+        position: relative;
+        z-index: 1;
+      }
 
-  .besd {
-    position: absolute;
-    top: clamp(14px, 4vw, 24px);
-    right: clamp(14px, 4vw, 24px);
-    font-weight: 700;
-    font-size: clamp(11px, 3vw, 14px);
-    z-index: 2;
-  }
+      .besd {
+        position: absolute;
+        top: clamp(14px, 4vw, 24px);
+        right: clamp(14px, 4vw, 24px);
+        font-weight: 700;
+        font-size: clamp(11px, 3vw, 14px);
+        z-index: 2;
+      }
 
+      /* ---------- Details section ---------- */
+      .details-section {
+        padding-top: 0;
+      }
+      .details-bg {
+        background-image: url("resources/background/background1.png");
+      }
 
-  /* ---------- Details section ---------- */
-  .details-section { padding-top: clamp(50px, 13vw, 70px); }
-  .details-bg { background-image: url('resources/background/background1.png'); }
+      .details-overlay {
+        padding: clamp(50px, 13vw, 70px) clamp(24px, 7vw, 42px)
+          clamp(70px, 16vw, 100px);
+      }
 
-  .details-overlay {
-    padding: clamp(50px, 13vw, 70px) clamp(24px, 7vw, 42px) clamp(70px, 16vw, 100px);
-  }
+      .family-row {
+        direction: ltr;
+        display: flex;
+        justify-content: space-between;
+        gap: 4%;
+        margin-bottom: clamp(28px, 8vw, 40px);
+      }
+      .family-col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(14px, 4vw, 22px);
+        text-align: left;
+        font-weight: 600;
+        font-size: clamp(9px, 2.7vw, 13.5px);
+        letter-spacing: 0.3px;
+      }
+      .family-col div {
+        white-space: nowrap;
+      }
 
-  .family-row {
-    direction: ltr;
-    display: flex;
-    justify-content: space-between;
-    gap: 4%;
-    margin-bottom: clamp(28px, 8vw, 40px);
-  }
-  .family-col {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: clamp(14px, 4vw, 22px);
-    text-align: center;
-    font-weight: 700;
-    font-size: clamp(10.5px, 3vw, 13.5px);
-    letter-spacing: 0.3px;
-  }
+      .center-text {
+        text-align: center;
+        font-weight: 700;
+        font-size: clamp(13px, 3.6vw, 16px);
+        line-height: 1.55;
+        margin-bottom: clamp(22px, 6vw, 32px);
+      }
+      .announcement-text {
+        font-weight: 500;
+      }
+      .ceremony-text {
+        font-weight: 500;
+      }
 
-  .center-text {
-    text-align: center;
-    font-weight: 700;
-    font-size: clamp(13px, 3.6vw, 16px);
-    line-height: 1.55;
-    margin-bottom: clamp(22px, 6vw, 32px);
-  }
+      .couple-name {
+        font-family: "CitadelScript", cursive;
+        font-weight: 400;
+        text-align: center;
+        font-size: clamp(46px, 14vw, 72px);
+        margin: clamp(24px, 6vw, 34px) 0 clamp(40px, 10vw, 54px);
+        line-height: 1;
+      }
 
-  .couple-name {
-    font-family: 'CitadelScript', cursive;
-    font-weight: 400;
-    text-align: center;
-    font-size: clamp(46px, 14vw, 72px);
-    margin: clamp(6px, 2vw, 14px) 0 clamp(24px, 6vw, 34px);
-    line-height: 1;
-  }
+      .date-block {
+        text-align: center;
+        font-weight: 700;
+        font-size: clamp(15px, 4.2vw, 19px);
+        line-height: 1.7;
+        margin-bottom: clamp(22px, 6vw, 32px);
+      }
+      .date-script {
+        font-family: "CitadelScript", cursive;
+        font-weight: 400;
+        font-size: clamp(38px, 11vw, 56px);
+        margin: clamp(4px, 2vw, 10px) 0;
+        line-height: 1.1;
+      }
 
-  .date-block {
-    text-align: center;
-    font-weight: 700;
-    font-size: clamp(15px, 4.2vw, 19px);
-    line-height: 1.7;
-    margin-bottom: clamp(22px, 6vw, 32px);
-  }
-  .date-script {
-    font-family: 'CitadelScript', cursive;
-    font-weight: 400;
-    font-size: clamp(38px, 11vw, 56px);
-    margin: clamp(4px, 2vw, 10px) 0;
-    line-height: 1.1;
-  }
+      .venue-block {
+        text-align: center;
+        font-weight: 700;
+        font-size: clamp(14px, 3.8vw, 17px);
+        line-height: 1.7;
+        margin-bottom: clamp(18px, 5vw, 26px);
+      }
+      .date-block-fr {
+        font-weight: 600;
+        font-size: clamp(13px, 3.8vw, 17px);
+      }
+      .venue-block-fr {
+        font-weight: 600;
+        font-size: clamp(12px, 3.4vw, 15px);
+      }
 
-  .venue-block {
-    text-align: center;
-    font-weight: 700;
-    font-size: clamp(14px, 3.8vw, 17px);
-    line-height: 1.7;
-    margin-bottom: clamp(18px, 5vw, 26px);
-  }
+      .waze-wrap {
+        text-align: center;
+        margin-top: clamp(-16px, -4vw, -8px);
+        margin-bottom: clamp(26px, 7vw, 36px);
+      }
+      .waze-btn {
+        display: inline-block;
+        background: var(--btn-bg);
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: clamp(12px, 3.4vw, 15px);
+        padding: clamp(10px, 3vw, 14px) clamp(20px, 6vw, 32px);
+        border-radius: 2px;
+      }
 
-  .waze-wrap { text-align: center; margin-bottom: clamp(26px, 7vw, 36px); }
-  .waze-btn {
-    display: inline-block;
-    background: var(--btn-bg);
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: clamp(12px, 3.4vw, 15px);
-    padding: clamp(10px, 3vw, 14px) clamp(30px, 9vw, 46px);
-    border-radius: 2px;
-  }
+      .times-block {
+        text-align: center;
+        font-weight: 700;
+        font-size: clamp(14px, 3.8vw, 17px);
+        line-height: 1.7;
+        margin-bottom: clamp(14px, 4vw, 20px);
+      }
+      .times-row {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: clamp(18px, 5vw, 26px);
+        text-align: center;
+      }
+      .times-col .time-big {
+        font-size: clamp(17px, 4.6vw, 21px);
+        font-weight: 800;
+        display: block;
+      }
+      .times-col .time-label {
+        font-size: clamp(12px, 3.4vw, 15px);
+        font-weight: 700;
+      }
 
-  .times-block {
-    text-align: center;
-    font-weight: 700;
-    font-size: clamp(14px, 3.8vw, 17px);
-    line-height: 1.7;
-    margin-bottom: clamp(22px, 6vw, 32px);
-  }
-  .times-row {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: clamp(18px, 5vw, 26px);
-    text-align: center;
-  }
-  .times-col .time-big { font-size: clamp(17px, 4.6vw, 21px); font-weight: 800; display: block; }
-  .times-col .time-label { font-size: clamp(12px, 3.4vw, 15px); font-weight: 700; }
+      .invite-note {
+        text-align: center;
+        font-weight: 700;
+        font-size: clamp(13px, 3.6vw, 16px);
+        margin-bottom: clamp(26px, 7vw, 36px);
+      }
 
-  .invite-note {
-    text-align: center;
-    font-weight: 700;
-    font-size: clamp(13px, 3.6vw, 16px);
-    margin-bottom: clamp(26px, 7vw, 36px);
-  }
+      .memorial {
+        text-align: center;
+        font-size: clamp(9.5px, 2.6vw, 11.5px);
+        line-height: 1.75;
+        opacity: 0.92;
+        padding-top: clamp(20px, 5vw, 28px);
+      }
+      .memorial-fr {
+        font-weight: 600;
+        font-size: clamp(8px, 2.1vw, 9.5px);
+        padding-top: clamp(10px, 3vw, 16px);
+      }
 
-  .memorial {
-    text-align: center;
-    font-size: clamp(9.5px, 2.6vw, 11.5px);
-    line-height: 1.75;
-    opacity: 0.92;
-    padding-top: clamp(20px, 5vw, 28px);
-  }
+      /* ---------- Form section ---------- */
+      .form-section {
+        min-height: 60vh;
+      }
+      .form-bg {
+        background-image: url("resources/background/background2.png");
+      }
 
+      .form-overlay {
+        padding: clamp(50px, 13vw, 70px) clamp(24px, 7vw, 42px)
+          clamp(70px, 16vw, 100px);
+        color: #8f5b3e;
+      }
 
-  /* ---------- Form section ---------- */
-  .form-section { min-height: 60vh; }
-  .form-bg { background-image: url('resources/background/background2.png'); }
+      .form-title {
+        text-align: center;
+        font-weight: 700;
+        font-size: clamp(30px, 9vw, 44px);
+        margin: 0 0 clamp(32px, 9vw, 46px);
+      }
 
-  .form-overlay {
-    padding: clamp(50px, 13vw, 70px) clamp(24px, 7vw, 42px) clamp(70px, 16vw, 100px);
-    color: #8f5b3e;
-  }
+      .field-group {
+        margin-bottom: clamp(20px, 5.5vw, 28px);
+      }
+      .field-label {
+        display: block;
+        font-weight: 700;
+        font-size: clamp(12px, 3.4vw, 15px);
+        margin-bottom: clamp(6px, 2vw, 10px);
+        letter-spacing: 0.3px;
+      }
+      input[type="text"],
+      input[type="number"],
+      textarea {
+        width: 100%;
+        border: 1px solid var(--text);
+        border-radius: 8px;
+        background: #fff;
+        color: #8f5b3e;
+        font-family: inherit;
+        font-size: clamp(13px, 3.6vw, 15px);
+        padding: clamp(10px, 3vw, 14px);
+      }
+      textarea {
+        min-height: clamp(70px, 18vw, 100px);
+        resize: vertical;
+      }
+      input:disabled {
+        background: #eee;
+        color: #a89787;
+      }
 
-  .form-title {
-    text-align: center;
-    font-weight: 700;
-    font-size: clamp(30px, 9vw, 44px);
-    margin: 0 0 clamp(32px, 9vw, 46px);
-  }
+      .radio-row {
+        display: flex;
+        gap: clamp(18px, 5vw, 28px);
+        margin-top: clamp(8px, 2.4vw, 12px);
+      }
+      .radio-row-fr {
+        flex-direction: column;
+        gap: clamp(8px, 2vw, 12px);
+      }
+      .radio-option {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 600;
+        font-size: clamp(13px, 3.6vw, 15px);
+        cursor: pointer;
+      }
+      .radio-option input {
+        width: 18px;
+        height: 18px;
+        accent-color: #8f5b3e;
+        border-color: #8f5b3e;
+      }
 
-  .field-group { margin-bottom: clamp(20px, 5.5vw, 28px); }
-  .field-label {
-    display: block;
-    font-weight: 700;
-    font-size: clamp(12px, 3.4vw, 15px);
-    margin-bottom: clamp(6px, 2vw, 10px);
-    letter-spacing: 0.3px;
-  }
-  input[type="text"], input[type="number"], textarea {
-    width: 100%;
-    border: 1px solid var(--text);
-    border-radius: 2px;
-    background: #fff;
-    color: #8f5b3e;
-    font-family: inherit;
-    font-size: clamp(13px, 3.6vw, 15px);
-    padding: clamp(10px, 3vw, 14px);
-  }
-  textarea { min-height: clamp(70px, 18vw, 100px); resize: vertical; }
-  input:disabled { background: #eee; color: #a89787; }
+      .submit-btn {
+        display: block;
+        width: 100%;
+        background: var(--btn-bg);
+        color: #8f5b3e;
+        border: 1px solid var(--text);
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: clamp(14px, 4vw, 17px);
+        letter-spacing: 0.4px;
+        padding: clamp(14px, 4vw, 18px);
+        margin-top: clamp(12px, 3vw, 18px);
+        cursor: pointer;
+        font-family: inherit;
+      }
+      .submit-btn:active {
+        opacity: 0.85;
+      }
+      .submit-btn-fr {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-  .radio-row { display: flex; gap: clamp(18px, 5vw, 28px); margin-top: clamp(8px, 2.4vw, 12px); }
-  .radio-option { display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: clamp(13px, 3.6vw, 15px); cursor: pointer; }
-  .radio-option input { width: 18px; height: 18px; accent-color: var(--text); }
+      .form-error {
+        color: #8f5b3e;
+        font-weight: 700;
+        font-size: clamp(12px, 3.2vw, 14px);
+        text-align: center;
+        margin-top: clamp(10px, 3vw, 14px);
+      }
 
-  .submit-btn {
-    display: block;
-    width: 100%;
-    background: var(--btn-bg);
-    color: #8f5b3e;
-    border: 1px solid var(--text);
-    border-radius: 2px;
-    font-weight: 700;
-    font-size: clamp(14px, 4vw, 17px);
-    letter-spacing: 0.4px;
-    padding: clamp(14px, 4vw, 18px);
-    margin-top: clamp(12px, 3vw, 18px);
-    cursor: pointer;
-    font-family: inherit;
-  }
-  .submit-btn:active { opacity: 0.85; }
+      .success-box {
+        border: 1px solid var(--text);
+        border-radius: 2px;
+        padding: clamp(34px, 9vw, 48px) clamp(20px, 6vw, 30px);
+        text-align: center;
+        font-weight: 600;
+        font-size: clamp(14px, 4vw, 17px);
+        line-height: 1.7;
+      }
 
-  .form-error {
-    color: #8f5b3e;
-    font-weight: 700;
-    font-size: clamp(12px, 3.2vw, 14px);
-    text-align: center;
-    margin-top: clamp(10px, 3vw, 14px);
-  }
-
-  .success-box {
-    border: 1px solid var(--text);
-    border-radius: 2px;
-    padding: clamp(34px, 9vw, 48px) clamp(20px, 6vw, 30px);
-    text-align: center;
-    font-weight: 600;
-    font-size: clamp(14px, 4vw, 17px);
-    line-height: 1.7;
-  }
-
-  /* ---------- RTL overrides ---------- */
-  [dir="rtl"] { font-family: 'Carmela', sans-serif; }
-  [dir="rtl"] .radio-row { direction: rtl; }
-  [dir="rtl"] .times-row { direction: rtl; }
-</style>
-</head>
-<body>
-
-<div id="splash">
-  <div class="splash-inner">
-    <span class="splash-besd">בס"ד</span>
-    <div class="envelope-wrap">
-      <img src="resources/envelope.png" alt="Sarah & Elian" />
-      <div class="splash-buttons">
-        <button type="button" class="splash-btn fr-btn" data-lang="fr">OUVRIR L'INVITATION</button>
-        <button type="button" class="splash-btn he-btn" data-lang="he">לפתיחת ההזמנה</button>
+      /* ---------- RTL overrides ---------- */
+      [dir="rtl"] {
+        font-family: "Carmela", sans-serif;
+      }
+      [dir="rtl"] .radio-row {
+        direction: rtl;
+      }
+      [dir="rtl"] .times-row {
+        direction: rtl;
+      }
+      [dir="rtl"] .family-col {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="splash">
+      <div class="splash-inner">
+        <span class="splash-besd">בס"ד</span>
+        <div class="envelope-wrap">
+          <img src="resources/envelope.png" alt="Sarah & Elian" />
+          <div class="splash-buttons">
+            <button type="button" class="splash-btn fr-btn" data-lang="fr">
+              OUVRIR L'INVITATION
+            </button>
+            <button type="button" class="splash-btn he-btn" data-lang="he">
+              לפתיחת ההזמנה
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<audio id="music" src="resources/music.mp3" loop preload="auto"></audio>
+    <audio id="music" src="resources/music.mp3" loop preload="auto"></audio>
 
-<div class="page">
+    <div class="page">
+      <!-- ============ FRENCH ============ -->
+      <div id="content-fr" class="lang-block" dir="ltr">
+        <section class="details-section">
+          <div class="bg-layer details-bg"></div>
+          <span class="besd">בס"ד</span>
+          <div class="overlay details-overlay">
+            <div class="family-row">
+              <div class="family-col">
+                <div>DENISE &amp; MEYER DANAN</div>
+                <div>STÉPHANIE &amp; AVI REBIBO</div>
+              </div>
+              <div
+                class="family-col"
+                style="transform: translateX(clamp(24px, 8vw, 42px))"
+              >
+                <div>RAHEL &amp; SHIMON BATITO</div>
+                <div>LIZI &amp; YOEL BATITO</div>
+              </div>
+            </div>
 
-  <!-- ============ FRENCH ============ -->
-  <div id="content-fr" class="lang-block" dir="ltr">
+            <div class="center-text announcement-text">
+              ONT LA JOIE DE VOUS FAIRE PART DU MARIAGE DE LEURS PETITS-ENFANTS
+              ET ENFANTS
+            </div>
 
-    <section class="details-section">
-      <div class="bg-layer details-bg"></div>
-      <span class="besd">בס"ד</span>
-      <div class="overlay details-overlay">
+            <div class="couple-name">Sarah &amp; Elian</div>
 
-        <div class="family-row">
-          <div class="family-col">
-            <div>DENISE &amp; MEYER DANAN</div>
-            <div>STÉPHANIE &amp; AVI REBIBO</div>
-          </div>
-          <div class="family-col">
-            <div>RAHEL &amp; SHIMON BATITO</div>
-            <div>LIZI &amp; YOEL BATITO</div>
-          </div>
-        </div>
+            <div class="center-text ceremony-text">
+              ET SERAIENT HONORÉS DE VOTRE PRÉSENCE À LA<br />CÉRÉMONIE
+              RELIGIEUSE QUI SERA CÉLÉBRÉE
+            </div>
 
-        <div class="center-text">ONT LA JOIE DE VOUS FAIRE PART DU MARIAGE DE LEURS PETITS-ENFANTS ET ENFANTS</div>
+            <div class="date-block date-block-fr">
+              LE MARDI 25 AOÛT 2026<br />
+              12 ELOUL 5786
+            </div>
 
-        <div class="couple-name">Sarah &amp; Elian</div>
+            <div class="venue-block venue-block-fr">
+              DANS LES SALONS<br />
+              KADITA, EMEK HEFER
+            </div>
 
-        <div class="center-text">ET SERAIENT HONORÉS DE VOTRE PRÉSENCE À LA CÉRÉMONIE RELIGIEUSE QUI SERA CÉLÉBRÉE</div>
+            <div class="waze-wrap">
+              <a
+                class="waze-btn"
+                href="https://waze.com/ul/hsvbb649f1&navigate=yes"
+                target="_blank"
+                rel="noopener"
+                >WAZE</a
+              >
+            </div>
 
-        <div class="date-block">
-          LE MARDI 25 AOÛT 2026<br />
-          12 ELOUL 5786
-        </div>
+            <div class="times-block">
+              LE COKTAIL DÉBUTERA À 19H00<br />
+              LA HOUPPA AURA LIEU À 20H00 PRÉCISES
+            </div>
 
-        <div class="venue-block">
-          DANS LES SALONS<br />
-          KADITA, EMEK HEFER
-        </div>
-
-        <div class="waze-wrap">
-          <a class="waze-btn" href="https://waze.com/ul/hsvbb649f1&navigate=yes" target="_blank" rel="noopener">WAZE</a>
-        </div>
-
-        <div class="times-block">
-          LE COKTAIL DÉBUTERA À 19H00<br />
-          LA HOUPPA AURA LIEU À 20H00 PRÉCISES
-        </div>
-
-        <div class="memorial">
-          UNE PENSÉE POUR NOS GRANDS-PARENTS, À JAMAIS PRÉSENTS DANS NOS COEURS<br />
-          JAQUELINE HAYA ET FÉLIX JAOUI<br />
-          ILANA HÉLÈNE ALOUF<br /><br />
-          ET UNE PENSÉE PARTICULIÈRE À NOTRE AMI GUIBOR YOEL GOLDISH<br />
-          PARTI TROP TÔT, MAIS PRÉSENT À JAMAIS DANS NOS COEURS
-        </div>
-
-      </div>
-    </section>
-
-    <section class="form-section">
-      <div class="bg-layer form-bg"></div>
-      <div class="overlay form-overlay">
-        <h2 class="form-title">RSVP</h2>
-
-        <form id="form-fr" novalidate>
-          <div class="field-group">
-            <label class="field-label" for="lastName-fr">NOM</label>
-            <input type="text" id="lastName-fr" name="lastName" required />
-          </div>
-
-          <div class="field-group">
-            <label class="field-label" for="firstName-fr">PRÉNOM</label>
-            <input type="text" id="firstName-fr" name="firstName" required />
-          </div>
-
-          <div class="field-group">
-            <span class="field-label">SEREZ-VOUS PRÉSENT(E) À LA HOUPPA</span>
-            <div class="radio-row">
-              <label class="radio-option"><input type="radio" name="attending-fr" value="oui" required /> OUI</label>
-              <label class="radio-option"><input type="radio" name="attending-fr" value="non" /> NON</label>
+            <div class="memorial memorial-fr">
+              UNE PENSÉE POUR NOS GRANDS-PARENTS, À JAMAIS PRÉSENTS DANS NOS
+              COEURS<br />
+              JAQUELINE HAYA ET FÉLIX JAOUI<br />
+              ILANA HÉLÈNE ALOUF<br />
+              ET UNE PENSÉE PARTICULIÈRE À NOTRE AMI GUIBOR YOEL GOLDISH<br />
+              PARTI TROP TÔT, MAIS PRÉSENT À JAMAIS DANS NOS COEURS
             </div>
           </div>
+        </section>
 
-          <div class="field-group">
-            <label class="field-label" for="guests-fr">NOMBRE DE PERSONNES</label>
-            <input type="number" id="guests-fr" name="guests" min="0" />
+        <section class="form-section">
+          <div class="bg-layer form-bg"></div>
+          <div class="overlay form-overlay">
+            <h2 class="form-title">RSVP</h2>
+
+            <form id="form-fr" novalidate>
+              <div class="field-group">
+                <label class="field-label" for="lastName-fr">NOM</label>
+                <input type="text" id="lastName-fr" name="lastName" required />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="firstName-fr">PRÉNOM</label>
+                <input
+                  type="text"
+                  id="firstName-fr"
+                  name="firstName"
+                  required
+                />
+              </div>
+
+              <div class="field-group">
+                <span class="field-label"
+                  >SEREZ-VOUS PRÉSENT(E) À LA HOUPPA</span
+                >
+                <div class="radio-row radio-row-fr">
+                  <label class="radio-option"
+                    ><input
+                      type="radio"
+                      name="attending-fr"
+                      value="oui"
+                      required
+                    />
+                    OUI</label
+                  >
+                  <label class="radio-option"
+                    ><input type="radio" name="attending-fr" value="non" />
+                    NON</label
+                  >
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="guests-fr"
+                  >NOMBRE DE PERSONNES</label
+                >
+                <input type="number" id="guests-fr" name="guests" min="0" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="message-fr"
+                  >LAISSEZ UN MESSAGE AUX MARIÉS !</label
+                >
+                <textarea id="message-fr" name="message"></textarea>
+              </div>
+
+              <div class="form-error" id="error-fr" hidden>
+                Merci de remplir les champs obligatoires.
+              </div>
+
+              <button type="submit" class="submit-btn submit-btn-fr">
+                CONFIRMEZ VOTRE RÉPONSE
+              </button>
+            </form>
+
+            <div class="success-box" id="success-fr" hidden></div>
           </div>
-
-          <div class="field-group">
-            <label class="field-label" for="message-fr">LAISSEZ UN MESSAGE AUX MARIÉS !</label>
-            <textarea id="message-fr" name="message"></textarea>
-          </div>
-
-          <div class="form-error" id="error-fr" hidden>Merci de remplir les champs obligatoires.</div>
-
-          <button type="submit" class="submit-btn">CONFIRMEZ VOTRE RÉPONSE</button>
-        </form>
-
-        <div class="success-box" id="success-fr" hidden></div>
+        </section>
       </div>
-    </section>
 
-  </div>
+      <!-- ============ HEBREW ============ -->
+      <div id="content-he" class="lang-block" dir="rtl">
+        <section class="details-section">
+          <div class="bg-layer details-bg"></div>
+          <span class="besd">בס"ד</span>
+          <div class="overlay details-overlay">
+            <div class="family-row">
+              <div class="family-col">
+                <div>מאיר ודניס דנן</div>
+                <div>אברהם וסטפני רביבו</div>
+              </div>
+              <div class="family-col">
+                <div>שמעון ורחל בטיטו</div>
+                <div>יואל וליזי בטיטו</div>
+              </div>
+            </div>
 
-  <!-- ============ HEBREW ============ -->
-  <div id="content-he" class="lang-block" dir="rtl">
+            <div class="couple-name" style="direction: ltr">
+              Sarah &amp; Elian
+            </div>
 
-    <section class="details-section">
-      <div class="bg-layer details-bg"></div>
-      <span class="besd">בס"ד</span>
-      <div class="overlay details-overlay">
+            <div class="center-text">
+              נרגשים להזמינכם לחגוג עמנו את היום המאושר בחיינו
+            </div>
 
-        <div class="family-row">
-          <div class="family-col">
-            <div>מאיר ודניס דנן</div>
-            <div>אברהם וסטפני רביבו</div>
-          </div>
-          <div class="family-col">
-            <div>שמעון ורחל בטיטו</div>
-            <div>יואל וליזי בטיטו</div>
-          </div>
-        </div>
+            <div class="date-block">
+              יום שלישי | י"ב באלול תשפ"ו
+              <div class="date-script" style="direction: ltr">25.08.2026</div>
+            </div>
 
-        <div class="couple-name" style="direction:ltr;">Sarah &amp; Elian</div>
+            <div class="venue-block">
+              אולמי "קדיתא"<br />
+              המסיק 5, עמק חפר
+            </div>
 
-        <div class="center-text">נרגשים להזמינכם לחגוג עמנו את היום המאושר בחיינו</div>
+            <div class="waze-wrap">
+              <a
+                class="waze-btn"
+                href="https://waze.com/ul/hsvbb649f1&navigate=yes"
+                target="_blank"
+                rel="noopener"
+                >WAZE</a
+              >
+            </div>
 
-        <div class="date-block">
-          יום שלישי | י"ב באלול תשפ"ו
-          <div class="date-script" style="direction:ltr;">25.08.2026</div>
-        </div>
+            <div class="times-row">
+              <div class="times-col">
+                <span class="time-big">19:00</span>
+                <span class="time-label">קבלת פנים</span>
+              </div>
+              <div class="times-col">
+                <span class="time-big">20:00</span>
+                <span class="time-label">חופה וקידושין</span>
+              </div>
+            </div>
 
-        <div class="venue-block">
-          אולמי "קדיתא"<br />
-          המסיק 5, עמק חפר
-        </div>
+            <div class="invite-note">נשמח לראותכם</div>
 
-        <div class="waze-wrap">
-          <a class="waze-btn" href="https://waze.com/ul/hsvbb649f1&navigate=yes" target="_blank" rel="noopener">WAZE</a>
-        </div>
-
-        <div class="times-row">
-          <div class="times-col">
-            <span class="time-big">19:00</span>
-            <span class="time-label">קבלת פנים</span>
-          </div>
-          <div class="times-col">
-            <span class="time-big">20:00</span>
-            <span class="time-label">חופה וקידושין</span>
-          </div>
-        </div>
-
-        <div class="invite-note">נשמח לראותכם</div>
-
-        <div class="memorial">
-          מחשבה לזכר סבינו וסבתותינו שהלכו לעולמם, אך נוכחים בליבנו<br />
-          ז'קלין חיה ופליקס ג'אוי ואילנה הלן אלוף ז"ל<br /><br />
-          ביום שמחתנו ליבנו זוכר גם את חברנו היקר יואל גולדיש ז"ל<br />
-          שהלך מאיתנו מוקדם מדי, אך יישאר איתנו בליבנו לנצח
-        </div>
-
-      </div>
-    </section>
-
-    <section class="form-section">
-      <div class="bg-layer form-bg"></div>
-      <div class="overlay form-overlay">
-        <h2 class="form-title">אישור הגעה</h2>
-
-        <form id="form-he" novalidate>
-          <div class="field-group">
-            <label class="field-label" for="lastName-he">שם משפחה</label>
-            <input type="text" id="lastName-he" name="lastName" required />
-          </div>
-
-          <div class="field-group">
-            <label class="field-label" for="firstName-he">שם</label>
-            <input type="text" id="firstName-he" name="firstName" required />
-          </div>
-
-          <div class="field-group">
-            <span class="field-label">האם תהיו נוכחים בחופה?</span>
-            <div class="radio-row">
-              <label class="radio-option"><input type="radio" name="attending-he" value="oui" required /> כן</label>
-              <label class="radio-option"><input type="radio" name="attending-he" value="non" /> לא</label>
+            <div class="memorial">
+              מחשבה לזכר סבינו וסבתותינו שהלכו לעולמם, אך נוכחים בליבנו<br />
+              ז'קלין חיה ופליקס ג'אוי ואילנה הלן אלוף ז"ל<br /><br />
+              ביום שמחתנו ליבנו זוכר גם את חברנו היקר יואל גולדיש ז"ל<br />
+              שהלך מאיתנו מוקדם מדי, אך יישאר איתנו בליבנו לנצח
             </div>
           </div>
+        </section>
 
-          <div class="field-group">
-            <label class="field-label" for="guests-he">מספר האורחים</label>
-            <input type="number" id="guests-he" name="guests" min="0" />
+        <section class="form-section">
+          <div class="bg-layer form-bg"></div>
+          <div class="overlay form-overlay">
+            <h2 class="form-title">אישור הגעה</h2>
+
+            <form id="form-he" novalidate>
+              <div class="field-group">
+                <label class="field-label" for="lastName-he">שם משפחה</label>
+                <input type="text" id="lastName-he" name="lastName" required />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="firstName-he">שם</label>
+                <input
+                  type="text"
+                  id="firstName-he"
+                  name="firstName"
+                  required
+                />
+              </div>
+
+              <div class="field-group">
+                <span class="field-label">האם תהיו נוכחים בחופה?</span>
+                <div class="radio-row">
+                  <label class="radio-option"
+                    ><input
+                      type="radio"
+                      name="attending-he"
+                      value="oui"
+                      required
+                    />
+                    כן</label
+                  >
+                  <label class="radio-option"
+                    ><input type="radio" name="attending-he" value="non" />
+                    לא</label
+                  >
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="guests-he">מספר האורחים</label>
+                <input type="number" id="guests-he" name="guests" min="0" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="message-he"
+                  >השאירו ברכה לזוג</label
+                >
+                <textarea id="message-he" name="message"></textarea>
+              </div>
+
+              <div class="form-error" id="error-he" hidden>
+                נא למלא את השדות הנדרשים.
+              </div>
+
+              <button type="submit" class="submit-btn">אשרו את תשובתכם</button>
+            </form>
+
+            <div class="success-box" id="success-he" hidden></div>
           </div>
-
-          <div class="field-group">
-            <label class="field-label" for="message-he">השאירו ברכה לזוג</label>
-            <textarea id="message-he" name="message"></textarea>
-          </div>
-
-          <div class="form-error" id="error-he" hidden>נא למלא את השדות הנדרשים.</div>
-
-          <button type="submit" class="submit-btn">אשרו את תשובתכם</button>
-        </form>
-
-        <div class="success-box" id="success-he" hidden></div>
+        </section>
       </div>
-    </section>
+    </div>
 
-  </div>
+    <script>
+      // Fill in before going live:
+      const GOOGLE_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbwBmo98XT-NgdY1ouRGQi9BHQqxEhrQGQowR09BgHfhI31p1faaGX6Rp_bvsedb2wFP/exec";
+      const SUPABASE_URL = "";
+      const SUPABASE_ANON_KEY = "";
+      const SUPABASE_TABLE = "rsvp";
 
-</div>
-
-<script>
-  // Fill in before going live:
-  const GOOGLE_SCRIPT_URL = "";
-  const SUPABASE_URL = "";
-  const SUPABASE_ANON_KEY = "";
-  const SUPABASE_TABLE = "rsvp";
-
-  const SUCCESS_MESSAGES = {
-    fr: {
-      oui: "Merci pour votre réponse ! Nous avons hâte de célébrer avec vous.",
-      non: "Merci pour votre réponse. Vous nous manquerez ce jour-là."
-    },
-    he: {
-      oui: "תודה על אישור ההגעה! מתרגשים לחגוג יחד אתכם.",
-      non: "תודה על תשובתכם. תחסרו לנו ביום המיוחד הזה."
-    }
-  };
-
-  // ---------- Splash ----------
-  const splash = document.getElementById('splash');
-  const music = document.getElementById('music');
-
-  function doPlay() {
-    music.play().catch(() => {});
-  }
-
-  document.querySelectorAll('.splash-btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const lang = btn.dataset.lang;
-      document.getElementById('content-fr').style.display = lang === 'fr' ? 'block' : 'none';
-      document.getElementById('content-he').style.display = lang === 'he' ? 'block' : 'none';
-      document.documentElement.lang = lang;
-      splash.style.display = 'none';
-      window.scrollTo(0, 0);
-      doPlay();
-    });
-  });
-
-  // ---------- Attendance lock ----------
-  function wireAttendanceLock(lang) {
-    const radios = document.querySelectorAll(`input[name="attending-${lang}"]`);
-    const guests = document.getElementById(`guests-${lang}`);
-    radios.forEach((r) => {
-      r.addEventListener('change', () => {
-        if (r.value === 'non' && r.checked) {
-          guests.disabled = true;
-          guests.value = '';
-        } else if (r.value === 'oui' && r.checked) {
-          guests.disabled = false;
-        }
-      });
-    });
-  }
-  wireAttendanceLock('fr');
-  wireAttendanceLock('he');
-
-  // ---------- Submission ----------
-  async function submitRsvp(lang, payload) {
-    const tasks = [];
-    if (GOOGLE_SCRIPT_URL) {
-      tasks.push(fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: JSON.stringify(payload)
-      }));
-    }
-    if (SUPABASE_URL && SUPABASE_ANON_KEY) {
-      tasks.push(fetch(`${SUPABASE_URL}/rest/v1/${SUPABASE_TABLE}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          apikey: SUPABASE_ANON_KEY,
-          Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-          Prefer: 'return=minimal'
+      const SUCCESS_MESSAGES = {
+        fr: {
+          oui: "Merci pour votre réponse ! Nous avons hâte de célébrer avec vous.",
+          non: "Merci pour votre réponse. Vous nous manquerez ce jour-là.",
         },
-        body: JSON.stringify(payload)
-      }));
-    }
-    if (tasks.length) await Promise.allSettled(tasks);
-  }
-
-  function wireForm(lang) {
-    const form = document.getElementById(`form-${lang}`);
-    const errorEl = document.getElementById(`error-${lang}`);
-    const successEl = document.getElementById(`success-${lang}`);
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const lastName = document.getElementById(`lastName-${lang}`).value.trim();
-      const firstName = document.getElementById(`firstName-${lang}`).value.trim();
-      const attending = form.querySelector(`input[name="attending-${lang}"]:checked`);
-      const guests = document.getElementById(`guests-${lang}`).value;
-      const message = document.getElementById(`message-${lang}`).value.trim();
-
-      if (!lastName || !firstName || !attending) {
-        errorEl.hidden = false;
-        return;
-      }
-      errorEl.hidden = true;
-
-      const payload = {
-        lang,
-        lastName,
-        firstName,
-        attending: attending.value,
-        guests: attending.value === 'oui' ? guests : 0,
-        message,
-        timestamp: new Date().toISOString()
+        he: {
+          oui: "תודה על אישור ההגעה! מתרגשים לחגוג יחד אתכם.",
+          non: "תודה על תשובתכם. תחסרו לנו ביום המיוחד הזה.",
+        },
       };
 
-      await submitRsvp(lang, payload);
+      // ---------- Splash ----------
+      const splash = document.getElementById("splash");
+      const music = document.getElementById("music");
 
-      form.hidden = true;
-      successEl.hidden = false;
-      successEl.textContent = SUCCESS_MESSAGES[lang][attending.value];
-    });
-  }
-  wireForm('fr');
-  wireForm('he');
-</script>
+      function doPlay() {
+        music.play().catch(() => {});
+      }
 
-</body>
+      document.querySelectorAll(".splash-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const lang = btn.dataset.lang;
+          document.getElementById("content-fr").style.display =
+            lang === "fr" ? "block" : "none";
+          document.getElementById("content-he").style.display =
+            lang === "he" ? "block" : "none";
+          document.documentElement.lang = lang;
+          splash.style.display = "none";
+          window.scrollTo(0, 0);
+          doPlay();
+        });
+      });
+
+      // ---------- Attendance lock ----------
+      function wireAttendanceLock(lang) {
+        const radios = document.querySelectorAll(
+          `input[name="attending-${lang}"]`,
+        );
+        const guests = document.getElementById(`guests-${lang}`);
+        radios.forEach((r) => {
+          r.addEventListener("change", () => {
+            if (r.value === "non" && r.checked) {
+              guests.disabled = true;
+              guests.value = "";
+            } else if (r.value === "oui" && r.checked) {
+              guests.disabled = false;
+            }
+          });
+        });
+      }
+      wireAttendanceLock("fr");
+      wireAttendanceLock("he");
+
+      // ---------- Submission ----------
+      async function submitRsvp(lang, payload) {
+        const tasks = [];
+        if (GOOGLE_SCRIPT_URL) {
+          tasks.push(
+            fetch(GOOGLE_SCRIPT_URL, {
+              method: "POST",
+              mode: "no-cors",
+              body: JSON.stringify(payload),
+            }),
+          );
+        }
+        if (SUPABASE_URL && SUPABASE_ANON_KEY) {
+          tasks.push(
+            fetch(`${SUPABASE_URL}/rest/v1/${SUPABASE_TABLE}`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                apikey: SUPABASE_ANON_KEY,
+                Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+                Prefer: "return=minimal",
+              },
+              body: JSON.stringify(payload),
+            }),
+          );
+        }
+        if (tasks.length) await Promise.allSettled(tasks);
+      }
+
+      function wireForm(lang) {
+        const form = document.getElementById(`form-${lang}`);
+        const errorEl = document.getElementById(`error-${lang}`);
+        const successEl = document.getElementById(`success-${lang}`);
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const lastName = document
+            .getElementById(`lastName-${lang}`)
+            .value.trim();
+          const firstName = document
+            .getElementById(`firstName-${lang}`)
+            .value.trim();
+          const attending = form.querySelector(
+            `input[name="attending-${lang}"]:checked`,
+          );
+          const guests = document.getElementById(`guests-${lang}`).value;
+          const message = document
+            .getElementById(`message-${lang}`)
+            .value.trim();
+
+          if (!lastName || !firstName || !attending) {
+            errorEl.hidden = false;
+            return;
+          }
+          errorEl.hidden = true;
+
+          const payload = {
+            lang,
+            lastName,
+            firstName,
+            attending: attending.value,
+            guests: attending.value === "oui" ? guests : 0,
+            message,
+            timestamp: new Date().toISOString(),
+          };
+
+          await submitRsvp(lang, payload);
+
+          form.hidden = true;
+          successEl.hidden = false;
+          successEl.textContent = SUCCESS_MESSAGES[lang][attending.value];
+        });
+      }
+      wireForm("fr");
+      wireForm("he");
+    </script>
+  </body>
 </html>
