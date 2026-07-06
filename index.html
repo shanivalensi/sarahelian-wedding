@@ -319,8 +319,9 @@
 
       .memorial {
         text-align: center;
-        font-weight: 700;
-        font-size: clamp(9.5px, 2.6vw, 11.5px);
+        font-weight: 900;
+        -webkit-text-stroke: 0.4px currentColor;
+        font-size: clamp(11px, 3vw, 13.5px);
         line-height: 1.75;
         opacity: 0.92;
         padding-top: clamp(20px, 5vw, 28px);
@@ -470,6 +471,44 @@
       }
       [dir="rtl"] .center-text {
         font-size: clamp(15px, 4.2vw, 18px);
+      }
+
+      [dir="rtl"] #content-he .form-title {
+        font-weight: 900;
+        font-size: clamp(46px, 13vw, 60px);
+        -webkit-text-stroke: 0.7px currentColor;
+      }
+      [dir="rtl"] #content-he .field-label {
+        font-weight: 900;
+        font-size: clamp(23px, 6.4vw, 29px);
+        -webkit-text-stroke: 0.8px currentColor;
+      }
+      [dir="rtl"] #content-he input[type="text"],
+      [dir="rtl"] #content-he input[type="number"],
+      [dir="rtl"] #content-he textarea {
+        font-weight: 900;
+        font-size: clamp(20px, 5.6vw, 25px);
+        -webkit-text-stroke: 0.5px currentColor;
+      }
+      [dir="rtl"] #content-he .radio-option {
+        font-weight: 900;
+        font-size: clamp(20px, 5.6vw, 25px);
+        -webkit-text-stroke: 0.5px currentColor;
+      }
+      [dir="rtl"] #content-he .submit-btn {
+        font-weight: 900;
+        font-size: clamp(24px, 6.8vw, 31px);
+        -webkit-text-stroke: 0.9px currentColor;
+      }
+      [dir="rtl"] #content-he .form-error {
+        font-weight: 900;
+        font-size: clamp(19px, 5.2vw, 23px);
+        -webkit-text-stroke: 0.5px currentColor;
+      }
+      [dir="rtl"] #content-he .success-box {
+        font-weight: 900;
+        font-size: clamp(21px, 6vw, 27px);
+        -webkit-text-stroke: 0.5px currentColor;
       }
     </style>
   </head>
