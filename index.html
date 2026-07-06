@@ -53,6 +53,12 @@
       type="font/otf"
       crossorigin
     />
+    <link
+      rel="preload"
+      href="resources/background/background0.jpg"
+      as="image"
+      fetchpriority="high"
+    />
 
     <style>
       @font-face {
@@ -125,7 +131,7 @@
         width: 100%;
         max-width: var(--max-w);
         height: 100%;
-        background-image: url("resources/background/background0.png");
+        background-image: url("resources/background/background0.jpg");
         background-size: cover;
         background-position: center;
         display: flex;
@@ -224,7 +230,7 @@
         padding-top: 0;
       }
       .details-bg {
-        background-image: url("resources/background/background1.png");
+        background-image: url("resources/background/background1.jpg");
       }
 
       .details-overlay {
@@ -375,7 +381,7 @@
         min-height: 60vh;
       }
       .form-bg {
-        background-image: url("resources/background/background2.png");
+        background-image: url("resources/background/background2.jpg");
       }
 
       .form-overlay {
