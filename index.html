@@ -876,30 +876,20 @@
       const splash = document.getElementById("splash");
       const music = document.getElementById("music");
 
-      const MUSIC_FADE_MS = 2500;
-      const MUSIC_TARGET_VOLUME = 1;
-
-      function fadeInMusic() {
-        music.volume = 0;
-        const startTime = performance.now();
-        function tick(now) {
-          const progress = Math.min((now - startTime) / MUSIC_FADE_MS, 1);
-          music.volume = progress * MUSIC_TARGET_VOLUME;
-          if (progress < 1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
+      function seekTo18() {
+        try {
+          music.currentTime = 18;
+        } catch (e) {}
       }
 
       function doPlay() {
-        const start = () => {
-          music.currentTime = 18;
-          fadeInMusic();
-          music.play().catch(() => {});
-        };
-        if (music.readyState >= 1) {
-          start();
-        } else {
-          music.addEventListener("loadedmetadata", start, { once: true });
+        // Call play() synchronously in the user-gesture handler so mobile
+        // browsers don't block it — deferring via an event listener (e.g.
+        // waiting for loadedmetadata) can lose the gesture and silently fail.
+        seekTo18();
+        music.play().catch(() => {});
+        if (music.readyState < 1) {
+          music.addEventListener("loadedmetadata", seekTo18, { once: true });
         }
       }
 
