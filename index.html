@@ -93,24 +93,37 @@
     position: absolute;
     left: 6%;
     right: 6%;
-    bottom: 13%;
+    bottom: 6%;
     display: flex;
-    justify-content: space-between;
-    gap: 4%;
+    justify-content: center;
+    gap: 3%;
   }
   .splash-btn {
-    flex: 1;
+    flex: 0 0 auto;
+    width: clamp(95px, 28vw, 135px);
+    text-align: center;
     background: var(--btn-bg);
     color: var(--text);
-    border: 1px solid var(--text);
-    border-radius: 3px;
-    padding: clamp(8px, 2.6vw, 12px) clamp(6px, 2vw, 10px);
-    font-size: clamp(10px, 2.8vw, 13px);
+    border: none;
+    border-radius: 0;
+    padding: clamp(9px, 2.6vw, 12px) clamp(6px, 2vw, 10px);
+    font-size: clamp(10px, 2.6vw, 12px);
     font-weight: 700;
     cursor: pointer;
     letter-spacing: 0.4px;
   }
-  .splash-btn.he-btn { font-family: 'Carmela', sans-serif; font-weight: 400; font-size: clamp(12px, 3.2vw, 15px); }
+  .splash-btn.fr-btn {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: clamp(8.5px, 2.3vw, 10.5px);
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+  }
+  .splash-btn.he-btn {
+    font-family: 'Carmela', sans-serif;
+    font-weight: 700;
+    font-size: clamp(11px, 3vw, 14px);
+  }
 
   /* ---------- Shared section scaffolding ---------- */
   .lang-block { display: none; }
@@ -258,6 +271,7 @@
 
   .form-overlay {
     padding: clamp(50px, 13vw, 70px) clamp(24px, 7vw, 42px) clamp(70px, 16vw, 100px);
+    color: #8f5b3e;
   }
 
   .form-title {
@@ -280,7 +294,7 @@
     border: 1px solid var(--text);
     border-radius: 2px;
     background: #fff;
-    color: var(--text);
+    color: #8f5b3e;
     font-family: inherit;
     font-size: clamp(13px, 3.6vw, 15px);
     padding: clamp(10px, 3vw, 14px);
@@ -296,7 +310,7 @@
     display: block;
     width: 100%;
     background: var(--btn-bg);
-    color: var(--text);
+    color: #8f5b3e;
     border: 1px solid var(--text);
     border-radius: 2px;
     font-weight: 700;
@@ -310,7 +324,7 @@
   .submit-btn:active { opacity: 0.85; }
 
   .form-error {
-    color: #a13b1e;
+    color: #8f5b3e;
     font-weight: 700;
     font-size: clamp(12px, 3.2vw, 14px);
     text-align: center;
