@@ -877,7 +877,15 @@
       const music = document.getElementById("music");
 
       function doPlay() {
-        music.play().catch(() => {});
+        const start = () => {
+          music.currentTime = 15;
+          music.play().catch(() => {});
+        };
+        if (music.readyState >= 1) {
+          start();
+        } else {
+          music.addEventListener("loadedmetadata", start, { once: true });
+        }
       }
 
       document.querySelectorAll(".splash-btn").forEach((btn) => {
