@@ -409,6 +409,7 @@
       }
       input[type="text"],
       input[type="number"],
+      input[type="tel"],
       textarea {
         width: 100%;
         border: 1px solid var(--text);
@@ -418,6 +419,13 @@
         font-family: inherit;
         font-size: clamp(13px, 3.6vw, 15px);
         padding: clamp(10px, 3vw, 14px);
+      }
+      input[type="text"]::placeholder,
+      input[type="number"]::placeholder,
+      input[type="tel"]::placeholder,
+      textarea::placeholder {
+        color: #8f5b3e;
+        opacity: 0.4;
       }
       textarea {
         min-height: clamp(70px, 18vw, 100px);
@@ -457,6 +465,7 @@
       }
 
       .submit-btn {
+        position: relative;
         display: block;
         width: 100%;
         background: var(--btn-bg);
@@ -473,6 +482,34 @@
       }
       .submit-btn:active {
         opacity: 0.85;
+      }
+      .submit-btn:disabled {
+        cursor: not-allowed;
+        opacity: 0.85;
+      }
+      .btn-spinner {
+        display: none;
+        width: 1.1em;
+        height: 1.1em;
+        border: 2px solid currentColor;
+        border-right-color: transparent;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: btn-spin 0.7s linear infinite;
+      }
+      .submit-btn.is-loading .btn-label {
+        visibility: hidden;
+      }
+      .submit-btn.is-loading .btn-spinner {
+        display: block;
+      }
+      @keyframes btn-spin {
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
       }
       .submit-btn-fr {
         width: 85%;
@@ -538,6 +575,7 @@
       }
       #content-he input[type="text"],
       #content-he input[type="number"],
+      #content-he input[type="tel"],
       #content-he textarea {
         font-weight: 900;
         font-size: clamp(16px, 4.4vw, 19px);
@@ -715,7 +753,8 @@
               </div>
 
               <button type="submit" class="submit-btn submit-btn-fr">
-                CONFIRMEZ VOTRE RÉPONSE
+                <span class="btn-label">CONFIRMEZ VOTRE RÉPONSE</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
               </button>
             </form>
 
@@ -810,6 +849,20 @@
               </div>
 
               <div class="field-group">
+                <label class="field-label" for="phone-he">מספר טלפון</label>
+                <input
+                  type="tel"
+                  id="phone-he"
+                  name="phone"
+                  dir="ltr"
+                  style="text-align: right"
+                  placeholder="050-123-4567"
+                  inputmode="numeric"
+                  required
+                />
+              </div>
+
+              <div class="field-group">
                 <span class="field-label">האם תהיו נוכחים בחתונה?</span>
                 <div class="radio-row">
                   <label class="radio-option"
@@ -844,7 +897,10 @@
                 נא למלא את השדות הנדרשים.
               </div>
 
-              <button type="submit" class="submit-btn">אשרו את תשובתכם</button>
+              <button type="submit" class="submit-btn">
+                <span class="btn-label">אשרו את תשובתכם</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
             </form>
 
             <div class="success-box" id="success-he" hidden></div>
@@ -907,6 +963,27 @@
         });
       });
 
+      // ---------- Phone formatting (Hebrew page) ----------
+      const PHONE_PATTERN = /^05\d-\d{3}-\d{4}$/;
+
+      function formatIsraeliPhone(value) {
+        const digits = value.replace(/\D/g, "").slice(0, 10);
+        const p1 = digits.slice(0, 3);
+        const p2 = digits.slice(3, 6);
+        const p3 = digits.slice(6, 10);
+        let out = p1;
+        if (p2) out += "-" + p2;
+        if (p3) out += "-" + p3;
+        return out;
+      }
+
+      const phoneHe = document.getElementById("phone-he");
+      if (phoneHe) {
+        phoneHe.addEventListener("input", () => {
+          phoneHe.value = formatIsraeliPhone(phoneHe.value);
+        });
+      }
+
       // ---------- Attendance lock ----------
       function wireAttendanceLock(lang) {
         const radios = document.querySelectorAll(
@@ -960,9 +1037,11 @@
         const form = document.getElementById(`form-${lang}`);
         const errorEl = document.getElementById(`error-${lang}`);
         const successEl = document.getElementById(`success-${lang}`);
+        const submitBtn = form.querySelector(".submit-btn");
 
         form.addEventListener("submit", async (e) => {
           e.preventDefault();
+          if (submitBtn.disabled) return;
           const lastName = document
             .getElementById(`lastName-${lang}`)
             .value.trim();
@@ -976,14 +1055,18 @@
           const message = document
             .getElementById(`message-${lang}`)
             .value.trim();
+          const phoneEl = document.getElementById(`phone-${lang}`);
+          const phone = phoneEl ? phoneEl.value.trim() : "";
 
           const guestsRequired = attending && attending.value === "oui";
+          const phoneRequired = !!phoneEl;
 
           if (
             !lastName ||
             !firstName ||
             !attending ||
-            (guestsRequired && !guests)
+            (guestsRequired && !guests) ||
+            (phoneRequired && !PHONE_PATTERN.test(phone))
           ) {
             errorEl.hidden = false;
             return;
@@ -994,11 +1077,15 @@
             lang,
             lastName,
             firstName,
+            phone,
             attending: attending.value,
             guests: attending.value === "oui" ? guests : 0,
             message,
             timestamp: new Date().toISOString(),
           };
+
+          submitBtn.disabled = true;
+          submitBtn.classList.add("is-loading");
 
           await submitRsvp(lang, payload);
 
